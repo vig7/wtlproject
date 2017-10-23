@@ -1,0 +1,9 @@
+CREATE TABLE `tece'wtl'`
+(prn varchar(9),
+monday varchar(9),
+tuesday varchar(9),
+wednesday varchar(9),
+thursday varchar(9),
+friday varchar(9),
+week int
+)
