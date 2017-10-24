@@ -1,5 +1,5 @@
 body{
-	 background: url('../img/sies.jpg');
+	 background: url('../img/cover.jpg');
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center; 
@@ -10,6 +10,8 @@ img{
 	padding-right: 2px;
 	width: 83px;
 	height: 96%;
+	
+
 }
 .navbar-brand{
 
@@ -19,6 +21,7 @@ img{
 }
 .glyphicon.glyphicon-log-in{
 	font-size: 20px;
+
 }
 
 

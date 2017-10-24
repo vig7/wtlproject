@@ -1,22 +1,34 @@
-     <?php
+    <style type="text/css">
+        #prn{
+            display: none !important; 
+        } 
+    </style>
+    <?php
     $server="localhost";
     $user="root";
     $pass="";
     $db="signupusers";
     $conn=mysqli_connect("$server","$user","$pass","$db");
+    include ("addvalue.php");
+
     $x=1;
+    $a=1001;
     while($x<11){
-    $a = $_POST['$c'];
-    $b=(isset($_POST['m']) ? $_POST['m'] : 'ABSENT');
-    $c=(isset($_POST['t']) ? $_POST['t'] : 'ABSENT');
-    $d=(isset($_POST['w']) ? $_POST['w'] : 'ABSENT');
-    $e=(isset($_POST['th']) ? $_POST['th'] : 'ABSENT');
-    $f=(isset($_POST['f']) ? $_POST['f'] : 'ABSENT');
+            $prn=$_POST['115A'.$a];
+
+   # $a = $_POST['$c'];
+    $b=(isset($_POST['m'.$a]) ? $_POST['m'.$a] : 'ABSENT');
+    $c=(isset($_POST['t'.$a]) ? $_POST['t'.$a] : 'ABSENT');
+    $d=(isset($_POST['w'.$a]) ? $_POST['w'.$a] : 'ABSENT');
+    $e=(isset($_POST['th'.$a]) ? $_POST['th'.$a] : 'ABSENT');
+    $f=(isset($_POST['f'.$a]) ? $_POST['f'.$a] : 'ABSENT');
     $subject=$_POST['subject'];
-    $sql="INSERT INTO `tece'$subject'`(prn,monday,tuesday,wednesday,thursday,friday) VALUES('$a','$b','$c','$d','$e','$f')";
+    $sql="INSERT INTO `tece'$subject'`(prn,monday,tuesday,wednesday,thursday,friday) VALUES('$prn','$b','$c','$d','$e','$f')";
     mysqli_query($conn,$sql);
     $x++;
+    $a++;
 }
+
    /* {
        echo '<!DOCTYPE html>
                 <html>

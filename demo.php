@@ -17,6 +17,7 @@
     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
     <a href="demo.php">Videos</a>
     <a href="attendance.php">Attendance</a>
+    <a href="highlight.php">Highlights</a>
     <a href="contact.php">Contact Admin</a>
   </div>
   <span style="font-size:30px;color:#FFFFFF;cursor:pointer padding-left:10px;" onclick="openNav()"> &#9776; Menu </span>
@@ -27,24 +28,21 @@
     <div class="row">
    
         <div class="col-sm-4" >
-          <object width="420" height="315"
-              data="https://www.youtube.com/embed/60ItHLz5WEA">
-          </object>
+          <iframe width="854" height="480" src="https://www.youtube.com/embed/pNNMr5glICM" frameborder="0" allowfullscreen></iframe>
         </div>
      
     
         <div class="col-sm-4" >
-          <object width="420" height="315"
-              data="https://www.youtube.com/embed/60ItHLz5WEA">
-          </object>
+          <iframe width="854" height="480" src="https://www.youtube.com/embed/pNNMr5glICM" frameborder="0" allowfullscreen></iframe>
         </div>
      
    
         <div class="col-sm-4" >
-          <object width="420" height="315"
-              data="https://www.youtube.com/embed/60ItHLz5WEA">
-          </object>
+          <h2>Videos You might have missed !</h2>
+          <iframe width="854" height="480" src="https://www.youtube.com/embed/pNNMr5glICM" frameborder="0" allowfullscreen></iframe><br>
+          <iframe width="854" height="480" src="https://www.youtube.com/embed/pNNMr5glICM" frameborder="0" allowfullscreen></iframe>
         </div>
+
      
     </div>
   </div>

@@ -1,5 +1,6 @@
 p{
 	font-weight: 20px;
+	color:#000000; 
 }
 body{
 	background-image: url('../img/cont.jpg');
@@ -47,9 +48,7 @@ h4{
 	font-family: sans-serif;
 	color:#000000;
 }
-p{
-	color:#000000; 
-}
+
 .ccheader {
 	margin: 0 auto;
 	padding: 2em;

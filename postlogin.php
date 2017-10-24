@@ -18,6 +18,7 @@
 	  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
 	  <a href="demo.php">Videos</a>
 	  <a href="attendance.php">Attendance</a>
+	  <a href="highlight.php">Highlights</a>
 	  <a href="contact.php">Contact Admin</a>
 	</div>
 	<span style="font-size:30px;color:#FFFFFF;cursor:pointer" onclick="openNav()"> &#9776; Menu </span>

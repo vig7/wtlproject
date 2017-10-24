@@ -1,10 +1,16 @@
- <?php
+ <style type="text/css">
+        #prn{
+            display: none !important; 
+        } 
+    </style>
+ <?php session_start();
 echo "   <html>";
 echo"<body>";
-	$a=1001;
-	$b="115A";
     echo"<table>";
         echo"<form method='POST' action='add.php'>";
+          $l=1001;
+          $_SESSION['l']=$l;
+  $b="115A";
         echo"<tr>";
             echo"<th>";
             echo"<select  name='subject'>";
@@ -23,19 +29,24 @@ echo"<body>";
            echo" <th>Thursday</th>";
            echo" <th>Friday</th>";
        echo" </tr>";
-       while($a<1011){
-       	$c=$b.$a;
+       $c=$b.$l;
+       while($l<1011){
+       	
+        
        echo" <tr>";
           echo"  <th>";
            echo"<td>$c</td>";
            echo" </th>";
-           echo" <td><input type='checkbox' name='m' value='PRESENT'></td>";
-           echo" <td><input type='checkbox' name='t' value='PRESENT'></td>";
-           echo" <td><input type='checkbox' name='w' value='PRESENT'></td>";
-           echo" <td><input type='checkbox' name='th'value='PRESENT'></td>";
-           echo" <td><input type='checkbox' name='f' value='PRESENT'></td>";
+
+           echo"<input id='prn' name='".$c."' value=$c>";
+           echo" <td><input type='checkbox' name='m".$l."' value='PRESENT'></td>";
+           echo" <td><input type='checkbox' name='t".$l."' value='PRESENT'></td>";
+           echo" <td><input type='checkbox' name='w".$l."' value='PRESENT'></td>";
+           echo" <td><input type='checkbox' name='th".$l."'value='PRESENT'></td>";
+           echo" <td><input type='checkbox' name='f".$l."' value='PRESENT'></td>";
        echo" </tr>";
-       $a++;
+       $l++;
+       $c=$b.$l;
        }
        echo" <input type='submit' value='submit'>";
        echo" </form>";
