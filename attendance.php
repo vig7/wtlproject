@@ -83,7 +83,7 @@ session_start();
   color: rgba(0,0,0,.4);
 }
 .Box{
-      margin-top: 10em;
+      margin-top: 5em;
       margin-left: 25em;
 }
 .BoxA{
@@ -99,10 +99,13 @@ session_start();
 <body>
   <div id="mySidenav" class="sidenav">
     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-    <a
-     href="attendance.html">Attendance</a>
-    <a href="#">Chat Live</a>
-    <a href="contact.html">Contact Admin</a>
+    <?php
+    echo '<a><span class="glyphicon glyphicon-user">'."".$_SESSION['user'].'</span></a>';?>
+    <a href="highlight.php">Highlights</a>
+    <a href="attendance.php">Attendance</a>
+    <a href="demo.php">Videos</a>
+    <a href="contact.php">Contact Admin</a>
+    <a href="Logout.php" ><span class="glyphicon glyphicon-log-out" "></span> Logout</a>
   </div>
   <span style="font-size:30px;color:#FFFFFF;cursor:pointer" onclick="openNav()"> &#9776; Menu </span>
   <?php

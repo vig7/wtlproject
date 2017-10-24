@@ -16,7 +16,7 @@ if($result=mysqli_query($conn,$sql))
     if(mysqli_num_rows($result)>0)
     {   
         $_SESSION['user']=$a;
-        header("Location:postlogin.php");
+        header("Location:highlight.php");
         exit;
         
    	 }
@@ -24,7 +24,7 @@ if($result=mysqli_query($conn,$sql))
         {
            echo '<!DOCTYPE html>
                 <html>
-                <head">
+                <head>
                 <script>
                 alert("InCorrect Details\nTry Again");
                 window.location = "login.php";

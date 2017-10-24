@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -15,10 +18,13 @@
 <body>
   <div id="mySidenav" class="sidenav">
     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-    <a href="demo.php">Videos</a>
-    <a href="attendance.php">Attendance</a>
+    <?php
+    echo '<a><span class="glyphicon glyphicon-user">'."".$_SESSION['user'].'</span></a>';?>
     <a href="highlight.php">Highlights</a>
+    <a href="attendance.php">Attendance</a>
+    <a href="demo.php">Videos</a>
     <a href="contact.php">Contact Admin</a>
+    <a href="Logout.php" ><span class="glyphicon glyphicon-log-out" "></span> Logout</a>
   </div>
   <span style="font-size:30px;color:#FFFFFF;cursor:pointer padding-left:10px;" onclick="openNav()"> &#9776; Menu </span>
   
@@ -28,19 +34,19 @@
     <div class="row">
    
         <div class="col-sm-4" >
-          <iframe width="854" height="480" src="https://www.youtube.com/embed/pNNMr5glICM" frameborder="0" allowfullscreen></iframe>
+          <iframe width="400" height="480" src="https://www.youtube.com/embed/pNNMr5glICM" frameborder="0" allowfullscreen></iframe>
         </div>
      
     
         <div class="col-sm-4" >
-          <iframe width="854" height="480" src="https://www.youtube.com/embed/pNNMr5glICM" frameborder="0" allowfullscreen></iframe>
+          <iframe width="400" height="480" src="https://www.youtube.com/embed/pNNMr5glICM" frameborder="0" allowfullscreen></iframe>
         </div>
      
    
         <div class="col-sm-4" >
           <h2>Videos You might have missed !</h2>
-          <iframe width="854" height="480" src="https://www.youtube.com/embed/pNNMr5glICM" frameborder="0" allowfullscreen></iframe><br>
-          <iframe width="854" height="480" src="https://www.youtube.com/embed/pNNMr5glICM" frameborder="0" allowfullscreen></iframe>
+          <iframe width="400" height="480" src="https://www.youtube.com/embed/pNNMr5glICM" frameborder="0" allowfullscreen></iframe><br>
+          <iframe width="400" height="480" src="https://www.youtube.com/embed/pNNMr5glICM" frameborder="0" allowfullscreen></iframe>
         </div>
 
      

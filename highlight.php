@@ -75,22 +75,14 @@ function closeNav() {
 <body>
 <div id="mySidenav" class="sidenav">
     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-    <a href="#"><li class="dropdown">
-              <a class="dropdown-toggle" data-toggle="dropdown">
-                Videos
-                <span class="caret"></span>
-              </a>
-              <ul  class="dropdown-menu" style="color:#FFFFFF; font-size: 15px;"" >
-              <li style="font-size: 10px;"><a href="#">ComputerNetworks</span></a></li>
-              <li><a href="#">OperatingSystems</span></a></li>
-             <li><a href="#" >Microprocessor</span></a></li>
-             <li><a href="#" >SOAAD</span></a></li>
-             </ul>
-         </li>
-      </a>
-<a href="attendance.php">Attendance</a>
+    <?php
+    echo '<a><span class="glyphicon glyphicon-user">'."".$_SESSION['user'].'</span></a>';?>
     <a href="highlight.php">Hightlights</a>
+    <a href="attendance.php">Attendance</a>
+    <a href="demo.php">Videos</a>
     <a href="contact.php">Contact Admin</a>
+    <a href="Logout.php" ><span class="glyphicon glyphicon-log-out" "></span> Logout</a>
+
   </div>
   <span style="font-size:30px;color:#FFFFFF;cursor:pointer" onclick="openNav()"> &#9776; Menu </span>
 	
@@ -110,18 +102,18 @@ function closeNav() {
     <!-- Wrapper for slides -->
     <div class="carousel-inner">
       <div class="item active">
-        <img src="img/1.jpeg" alt="Los Angeles" style="width:100%;height: 400px;">
+        <img src="img/1.jpeg" alt="Los Angeles" style="width:100%;height: 600px;">
       </div>
 
       <div class="item">
-        <img src="img/4.jpg" alt="Chicago" style="width:100%;height: 400px;">
+        <img src="img/4.jpg" alt="Chicago" style="width:100%;height: 600px;">
       </div>
     
       <div class="item">
-        <img src="img/5.jpg" alt="New york" style="width:100%;height: 400px;">
+        <img src="img/5.jpg" alt="New york" style="width:100%;height: 600px;">
       </div>
       <div class="item">
-        <img src="img/7.jpg" alt="york" style="width:100%;height: 400px;">
+        <img src="img/7.jpg" alt="york" style="width:100%;height: 600px;">
       </div>
     </div>
 
