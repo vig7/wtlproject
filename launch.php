@@ -5,49 +5,11 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+      <link rel="stylesheet" type="text/css" href="css/launch.css">
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
-<style >
-        body{
-         background-image:url('img/cover.jpg');
-          background-repeat: no-repeat;
-          background-attachment: fixed;
-          background-position: center; 
 
-        }
-        img{
-          float:right;
-          padding-left: 5px; 
-          padding-right: 2px;
-          width: 83px;
-          height: 96%;
-          
-
-        }
-        .navbar-brand{
-
-          font-family: sans-serif;
-          font-size: 30px;
-          font-style: italic;
-        }
-        .glyphicon.glyphicon-log-in{
-          font-size: 20px;
-        }
-
-        h1{ 
-          font-family: "Impact";
-          font-size: 65px;
-          font-weight: 50px;
-          color:#C9B869;
-        }
-
-        #college{
-          text-align: center;
-        }
-
-
-</style>
 <body>
   <?php session_start();
   ?>
@@ -77,20 +39,26 @@
           </div>
       </nav>
         
-      <div class="Box" style=" width: 550px;height:70px;background-color:#EC7239;margin-left: 35em;opacity: 0.7; border-radius: 12px;">
-        
-          <h2 style="font-size: 50px;text-align: center;color:#FFFFFF;"><marquee><strong>WELCOME TO CLASS-HUB!</strong></marquee>
-        </h2>
-      </div>
-      <div class="Box" style=" width:1400px;height:570px;background-color:#EC7239;margin:3em;opacity: 0.4; border-radius: 12px;">
-        
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-          quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-          consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-          cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-          proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-      </div>
+
+<div class="timeline">
+  <div class="container left">
+    <div class="content" style=" opacity:0.8">
+      <h2 style="text-align: center;"><strong><strong><i>CLASS-HUB SYSTE</i>M</strong></strong></h2>
+      <h4 style="font-family: Georgia, serif ;font-size :20px;">Class hub is a sysytem where a student of siesgst can login in the system to have the access to the activities going in the college.Focusing on academics the claas hub system integrates videos of the lectures taught in the class which is updated every day. Students absent on the particular day of the week can have access to the videos  taught in class !</h4>
+      <a class="btn btn-primary btn-lg" href="login.php" role="button" style="margin-left: 7em;margin-top: 8px;"><strong>Login &raquo;</strong></a>
+    </div>
+  </div>
+  <div class="container right">
+    <div class="content" style=";opacity: 0.8">
+      <h2 style="text-align: center;"><strong><i>ABOUT SIES GST</i></strong></h2>
+      <h4 style="font-family: Georgia, serif ;font-size :20px;">SIES Graduate School of Technology is an engineering college, an integral part of SIES, and was started in the year 2002. It is one of the Institutes in Navi Mumbai imparting Engineering Technical Education. The institute is approved by the AICTE New Delhi, DTE Mumbai and affiliated to the University of Mumbai.</h4>
+      <a class="btn btn-primary btn-lg" href="http://www.siesgst.edu.in/" role="button" style="margin-left: 7em;margin-top: 8px"><strong>Explore &raquo;</strong></a>
+    </div>
+  </div>
+  
+  
+</div>
+      
   
 </body>
 </html>
