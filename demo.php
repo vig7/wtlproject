@@ -179,13 +179,13 @@ session_start();
         </div>
      <div class="col-sm-9 missed-lectures" >
          <h3 id="blinker" style="margin-bottom: 1em;color:#FFFFFF;"><strong>VIDEOS YOU HAVE MISSED LECTURES!</strong></h3>
-     <iframe class="mySlides2" id="frame1"  src="sanky.html">
+     <iframe class="mySlides2" id="frame1"  src="sanky.php">
               <p>Your browser does not support iframes.</p>
             </iframe>
 </div>
 <div class="col-sm-9 missed-lectures" >
          <h3 style="margin-bottom: 1em;" id="mp"><strong>Microprocessor</strong></h3>
-        <iframe class="mySlides2" id="frame2"  src="sanky.html">
+        <iframe class="mySlides2" id="frame2"  src="sanky.php">
               <p>Your browser does not support iframes.</p>
             </iframe>
          
@@ -193,7 +193,7 @@ session_start();
 </div>
 <div class="col-sm-9 missed-lectures" >
          <h3 style="margin-bottom: 1em;" id="cn"><strong>Computer Networks</strong></h3>
-        <iframe class="mySlides2" id="frame2"  src="sanky.html">
+        <iframe class="mySlides2" id="frame2"  src="sanky.php">
               <p>Your browser does not support iframes.</p>
             </iframe>
          
@@ -201,7 +201,7 @@ session_start();
 </div>
 <div class="col-sm-9 missed-lectures" >
          <h3 style="margin-bottom: 1em;" id="os"><strong>Operating Systems</strong></h3>
-        <iframe class="mySlides2" id="frame2"  src="sanky.html">
+        <iframe class="mySlides2" id="frame2"  src="sanky.php">
               <p>Your browser does not support iframes.</p>
             </iframe>
          
@@ -209,7 +209,7 @@ session_start();
 </div>
 <div class="col-sm-9 missed-lectures" >
          <h3 style="margin-bottom: 1em;" id="sooad"><strong>SOAAD</strong></h3>
-        <iframe class="mySlides2" id="frame2"  src="sanky.html">
+        <iframe class="mySlides2" id="frame2"  src="sanky.php">
               <p>Your browser does not support iframes.</p>
             </iframe>
          

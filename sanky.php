@@ -39,9 +39,9 @@
   
 }
 .w3-card-4:hover {
-  -moz-transform: scale(1.09);
-  -webkit-transform: scale(1.09);
-  transform: scale(1.09);
+  -moz-transform: scale(1.03);
+  -webkit-transform: scale(1.02);
+  transform: scale(1.03);
   -moz-transition: all 0.3s;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
@@ -56,24 +56,24 @@
 <div id="menu ">
  
     
-    <div class="w3-card-4 " style="width:18%; ">
-        <img src="ig12.jpg" alt="Norway" style="width:100%">
+    <div class="w3-card-4 " style="width:17%; ">
+        <iframe width="200" height="130" src="https://www.youtube.com/embed/qpgTC9MDx1o" frameborder="0" allowfullscreen></iframe>
      <center>  <button id="bt" class="w3-button w3-green w3-center">View</button></center> 
     </div>
-    <div class="w3-card-4 " style="width:18%">
-        <img src="ig12.jpg" alt="Norway" style="width:100%">
+    <div class="w3-card-4 " style="width:17%">
+        <iframe width="200" height="130" src="https://www.youtube.com/embed/qpgTC9MDx1o" frameborder="0" allowfullscreen></iframe>
     <center><button id="bt" class="w3-button w3-green w3-center">View</button></center> 
     </div>
-    <div class="w3-card-4 " style="width:18%">
-        <img src="ig12.jpg" alt="Norway" style="width:100%">
+    <div class="w3-card-4 " style="width:17%">
+        <iframe width="200" height="130" src="https://www.youtube.com/embed/qpgTC9MDx1o" frameborder="0" allowfullscreen></iframe>
          <center>  <button id="bt" class="w3-button w3-green w3-center">View</button></center> 
     </div>
-    <div class="w3-card-4 " style="width:18%">
-        <img src="ig12.jpg" alt="Norway" style="width:100%">
+    <div class="w3-card-4 " style="width:17%">
+        <iframe width="200" height="130" src="https://www.youtube.com/embed/qpgTC9MDx1o" frameborder="0" allowfullscreen></iframe>
          <center>  <button id="bt" class="w3-button w3-green w3-center">View</button></center> 
     </div>
-    <div class="w3-card-4 " style="width:18%">
-        <img src="ig12.jpg" alt="Norway" style="width:100%">
+    <div class="w3-card-4 " style="width:17%">
+        <iframe width="200" height="130" src="https://www.youtube.com/embed/qpgTC9MDx1o" frameborder="0" allowfullscreen></iframe>
          <center>  <button id="bt" class="w3-button w3-green w3-center">View</button></center> 
     </div>
     
@@ -85,7 +85,6 @@
 <script>
 
  
-    
 </script>
 
 </body>
