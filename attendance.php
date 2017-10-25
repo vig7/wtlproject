@@ -84,7 +84,7 @@ session_start();
 }
 .Box{
       margin-top: 5em;
-      margin-left: 25em;
+      margin-left: 27em;
 }
 .BoxA{
   margin-bottom: 7em;

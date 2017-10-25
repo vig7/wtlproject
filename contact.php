@@ -12,9 +12,18 @@
   <link href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <script >
+  <script>
     function go(){
-      alert("Response sent");
+      var msg=ValidateEmail();
+      if(!msg){
+        alert("Please enter Valid Email");
+      }
+      if(document.getElementsById("FullName").value==null||document.getElementsById("Email").value==null||document.getElementsById("comments").value==null||document.getElementsById("Subject").value==null)
+      {
+        alert("Please enter Valid Data");
+      }
+      else
+        alert("Response sent\nYou will be directed to Mail client.");
     }
   </script>
   <style >
@@ -219,23 +228,19 @@ text-decoration: none;
     <form method="post" action="mailto:bailmaresanket310@gmail.com" class="ccform">
     <div class="ccfield-prepend">
         <span class="ccform-addon"><i class="fa fa-user fa-2x"></i></span>
-        <input class="ccformfield" type="text"  name="FullName" placeholder="Full Name" required>
+        <input class="ccformfield" type="text"  name="FullName" placeholder="Full Name" required="true";>
     </div>
     <div class="ccfield-prepend">
         <span class="ccform-addon"><i class="fa fa-envelope fa-2x"></i></span>
-        <input class="ccformfield" type="text"  name="Email" placeholder="Email" required>
-    </div>
-    <div class="ccfield-prepend">
-        <span class="ccform-addon"><i class="fa fa-mobile-phone fa-2x"></i></span>
-        <input class="ccformfield" type="text" name="Phone" placeholder="Phone">
+        <input class="ccformfield" type="text"  name="Email" placeholder="a@b.com" required="true";>
     </div>
      <div class="ccfield-prepend">
         <span class="ccform-addon"><i class="fa fa-info fa-2x"></i></span>
-        <input class="ccformfield" type="text" name= "Subject" placeholder="Subject" required>
+        <input class="ccformfield" type="text" name= "Subject" placeholder="Subject" required="true";>
     </div>
     <div class="ccfield-prepend">
         <span class="ccform-addon"><i class="fa fa-comment fa-2x"></i></span>
-        <textarea class="ccformfield" name="comments" rows="8" placeholder="Message" required></textarea>
+        <textarea class="ccformfield" name="comments" rows="8" placeholder="Message" required="true";></textarea>
     </div>
     <div class="ccfield-prepend">
         <input class="ccbtn" type="submit" value="Submit" onclick="go()">

@@ -12,6 +12,8 @@ session_start();
   
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script type="text/javascript">
+    </script>
 </head>
 <style>
 	
@@ -235,8 +237,8 @@ a{color:inherit;text-decoration:none}
 							<label  class="label">BRANCH</label>
 							<label  class="label">
 									<select name="br" required="true">
-										  <option disabled="true" selected="true" >SELECT</option>
-										  <option value="CE">CE</option>
+										  
+										  <option value="CE" selected="true">CE</option>
 										  <option value="IT">IT</option>
 										  <option value="BT">BT</option>
 										  <option value="PPT">PPT</option>
@@ -272,10 +274,9 @@ a{color:inherit;text-decoration:none}
 					
 					<div class="group" id="select">
 							<label  class="label">BRANCH</label>
-							<label  class="label">
-									<select name="br" required="true">
-										  <option disabled="true" selected="true" >SELECT</option>
-										  <option value="CE">CE</option>
+							<label  class="label" >
+									<select name="br" required;>
+										  <option value="CE" selected="true">CE</option>
 										  <option value="IT">IT</option>
 										  <option value="BT">BT</option>
 										  <option value="PPT">PPT</option>
@@ -285,7 +286,7 @@ a{color:inherit;text-decoration:none}
 					</div>
 					<div class="group">
 						<label for="pass" class="label">PRN</label>
-						<input name="pr" type="text" class="input" required="true">
+						<input name="pr" type="text" class="input" required="true";>
 					</div>
 						<div class="group" style="padding-top: 25px;">
 						<input type="submit" class="button" value="Sign Up">

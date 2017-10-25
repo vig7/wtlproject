@@ -10,10 +10,11 @@
 </head>
 <style >
         body{
-         background: url('img/cover.jpg');
+         background-image:url('img/cover.jpg');
           background-repeat: no-repeat;
           background-attachment: fixed;
           background-position: center; 
+
         }
         img{
           float:right;
@@ -76,15 +77,19 @@
           </div>
       </nav>
         
-      <div class="container">
+      <div class="Box" style=" width: 550px;height:70px;background-color:#EC7239;margin-left: 35em;opacity: 0.7; border-radius: 12px;">
         
-          <h2 style="color:#FFFFFF">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+          <h2 style="font-size: 50px;text-align: center;color:#FFFFFF;"><marquee><strong>WELCOME TO CLASS-HUB!</strong></marquee>
+        </h2>
+      </div>
+      <div class="Box" style=" width:1400px;height:570px;background-color:#EC7239;margin:3em;opacity: 0.4; border-radius: 12px;">
+        
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
           tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
           quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
           consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
           cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-          proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-        </h2>
+          proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
       </div>
   
 </body>
