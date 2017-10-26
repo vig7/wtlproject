@@ -228,7 +228,7 @@
     <form method="POST" action="demo.php">
       <span class="custom-dropdown big" style="margin-right: 10px;">
     <select name="subject">    
-        <option selected="true" >Missed Videos</option>
+        <option selected="true" value="missed" >Missed Videos</option>
         <option value="mp">Microprocessor</option>  
         <option value="cn">Computer Networks</option>
         <option value="os">Operating Systems</option>
@@ -254,10 +254,10 @@
     if(isset($_POST['vdourl'])){
       $src=$_POST['url'];
     }else{
-      $src="https://www.youtube.com/embed/qpgTC9MDx1o";
+      $src=$row['monday'];
     }
     ?>
-          <iframe id="main-video" width="560" height="400" src=<?php echo $src; ?> frameborder="0" allowfullscreen></iframe>
+          <iframe id="main-video" width="560" height="400" src=<?php echo $src.'?autoplay=1'; ?> frameborder="0"; allowfullscreen; ></iframe>
         </div>
 
   <div class="col-sm-9" >

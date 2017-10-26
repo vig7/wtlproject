@@ -13,6 +13,7 @@ session_start();
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <script type="text/javascript">
+  
     </script>
 </head>
 <style>
@@ -256,9 +257,7 @@ a{color:inherit;text-decoration:none}
 						<input type="submit" class="button" value="Sign In">
 					</div>
 					<div class="hr"></div>
-					<div class="foot-lnk">
-						<a href="#forgot">Forgot Password?</a>
-					</div>
+					
 				</div>
 			</form>
 				<form method="POST" action="signup.php">
@@ -286,10 +285,10 @@ a{color:inherit;text-decoration:none}
 					</div>
 					<div class="group">
 						<label for="pass" class="label">PRN</label>
-						<input name="pr" type="text" class="input" required="true";>
+						<input  id ="pr" name="pr" type="text" class="input" required="true";>
 					</div>
 						<div class="group" style="padding-top: 25px;">
-						<input type="submit" class="button" value="Sign Up">
+						<input type="submit" class="button" value="Sign Up" ">
 					</div>
 					<div class="hr"></div>
 					

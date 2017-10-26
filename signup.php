@@ -9,23 +9,40 @@
     $c=$_POST["br"];
     $d=($_POST["pass"]);
     $e=md5($d);
-    $sql="INSERT INTO Student(prn,name,branch,passw) VALUES('$b','$a','$c','$e')";
-    if(mysqli_query($conn,$sql))
-    {
+   
+    if($conn)
+    {  if(strlen($b)>8||strlen($b)<8){
        echo '<!DOCTYPE html>
                 <html>
-                <head">
+                <head>
                 <script>
+                alert("Invalid Prn\nAccount Could not be Created");
+                    window.location = "login.php";
+                 </script>
+                  </head>
+                <body>
+                </body>
+                </html>';}
+                else{
+                    $sql="INSERT INTO Student(prn,name,branch,passw) VALUES('$b','$a','$c','$e')";
+                    if(mysqli_query($conn, $sql)){
+                     echo '<!DOCTYPE html>
+                    }
+                <html>
+                <head>
+                    <script>
                 alert("Account Created\nU can login to the system.");
-                window.location = "login.php";
-                </script>
-                </head>
+                    window.location = "login.php";
+                    </script>
+                    </head>
                 <body>
                 </body>
                 </html>';
-      
-
-    }
+            }
+                
+        }
+                
+ }
     else
     {
 

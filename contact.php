@@ -35,7 +35,8 @@ body{
   background-image: url('img/cont.jpg');
   background-repeat: no-repeat;
     background-attachment: fixed;
-    background-position: center; 
+    background-position: center;
+
 
 }
 .Box{
