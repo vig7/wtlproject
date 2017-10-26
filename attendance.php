@@ -92,7 +92,7 @@ session_start();
       margin-left: 27em;
 }
 .BoxA{
-  margin-bottom: 7em;
+  margin-bottom: 5em;
   margin-left: 20em;
 }
 
@@ -132,17 +132,19 @@ $server="localhost";
     ?>
  <div class="Box"> 
   <div class="BoxA">
-<span class="custom-dropdown big">
+
   <form method="POST">
+    <span class="custom-dropdown big" >
     <select id="wee" name="week">    
         <option value="1" selected="true">WEEK 1</option>  
         <option value="2">WEEK 2</option>
         <option value="3">WEEK 3</option>
         <option value="4">WEEK 4</option>
     </select>
-    <input type="submit" value="submit">
-  </form>
 </span>
+    <input type="submit" value="submit" class="btn btn-primary btn-lg">
+  </form>
+
 </div>
 <?php $week=1; ?>
 <h2 style="margin-left: 4em;">Student Attendance</h2>

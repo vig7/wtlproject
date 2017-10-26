@@ -85,7 +85,7 @@
       #frame1{
         width: 95%;
         height: 200px;
-        border:;
+        
           padding-left: 5%;
           ;
          
@@ -93,7 +93,7 @@
          #frame2{
         width: 95%;
         height: 200px;
-        border:;
+       
           padding-left: 5%;
           ;
          
@@ -205,6 +205,9 @@
         margin: 7px 0px;
        width: 40%;
        }
+  .BoxA{
+    width:1250px;
+  }
 
     </style>
 </head>
@@ -221,18 +224,21 @@
   </div>
   <span style="font-size:30px;color:#FFFFFF;cursor:pointer; padding-left:10px;" onclick="openNav()"> &#9776; Menu </span>
   <div  style="float: right;" >
-    <span class="custom-dropdown big">
+    
     <form method="POST" action="demo.php">
+      <span class="custom-dropdown big" style="margin-right: 10px;">
     <select name="subject">    
-        <option selected="true" disabled>SELECT SUBJECTS </option>
+        <option selected="true" >Missed Videos</option>
         <option value="mp">Microprocessor</option>  
         <option value="cn">Computer Networks</option>
         <option value="os">Operating Systems</option>
         <option value="sooad">SOOAD</option>
     </select>
-    <input type="submit" value="submit">
+  </span>
+    <input type="submit" value="submit" class="btn btn-primary btn-lg">
+ 
   </form>
-</span>
+
   </div>
   <?php
   if(isset($_POST['subject']))
@@ -243,20 +249,19 @@
     <div class="row">
   <div class="col-sm-9" >
     <?php
-    $vid=mysqli_query($conn,"SELECT monday FROM videos WHERE subject='mp'");
+    $vid=mysqli_query($conn,"SELECT monday FROM videos WHERE subject='missed'");
     $row=mysqli_fetch_assoc($vid);
     if(isset($_POST['vdourl'])){
       $src=$_POST['url'];
     }else{
-      $src="https://www.youtube.com/embed/qpgTC9MDx1o
-";
+      $src="https://www.youtube.com/embed/qpgTC9MDx1o";
     }
     ?>
           <iframe id="main-video" width="560" height="400" src=<?php echo $src; ?> frameborder="0" allowfullscreen></iframe>
         </div>
 
   <div class="col-sm-9" >
-<div id="menu ">
+<div id="menu" class="BoxA">
   <div class="w3-card-4 " style="width:18%; ">
     <?php
     $vid=mysqli_query($conn,"SELECT monday FROM videos WHERE subject='$sub'");
