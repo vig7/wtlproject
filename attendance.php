@@ -1,5 +1,10 @@
 <?php
 session_start();
+    $server="localhost";
+    $user="root";
+    $pass="";
+    $db="signupusers";
+    $conn=mysqli_connect("$server","$user","$pass","$db");
 ?>
 <!DOCTYPE html>
 <html>
@@ -125,20 +130,21 @@ $server="localhost";
       }
     }
     ?>
-
  <div class="Box"> 
   <div class="BoxA">
 <span class="custom-dropdown big">
-    <select>    
-        <option selected="true" disabled>SELECT WEEK</option>
-        <option>WEEK 1</option>  
-        <option>WEEK 2</option>
-        <option>WEEK 3</option>
-        <option>WEEK 4</option>
+  <form method="POST">
+    <select id="wee" name="week">    
+        <option value="1" selected="true">WEEK 1</option>  
+        <option value="2">WEEK 2</option>
+        <option value="3">WEEK 3</option>
+        <option value="4">WEEK 4</option>
     </select>
+    <input type="submit" value="submit">
+  </form>
 </span>
 </div>
- 
+<?php $week=1; ?>
 <h2 style="margin-left: 4em;">Student Attendance</h2>
 
 <table>
@@ -157,43 +163,57 @@ $server="localhost";
   <tbody >
     <tr>
       <td >Microprocessor </td>
-       <?php 
-     $sql="SELECT * FROM `tece'mp'` WHERE prn='113A1032'";
+       <?php
+
+      if(isset($_POST['week']))
+       $week = $_POST['week'];
+      
+     $sql="SELECT * FROM `tece'mp'` WHERE prn='113A1032' AND week=".$week;
       att($conn,$sql);
       ?>
     </tr>
     <tr>
       <td >Computer Networks</td>
  <?php 
-     $sql="SELECT * FROM `tece'cn'` WHERE prn='113A1032'";
+ if(isset($_POST['week']))
+      $week = $_POST['week'];
+     $sql="SELECT * FROM `tece'cn'` WHERE prn='113A1032' AND week=".$week;
       att($conn,$sql);
       ?>
     </tr>
     <tr>
       <td >Operating Systems </td>
      <?php 
-     $sql="SELECT * FROM `tece'os'` WHERE prn='113A1032'";
+     if(isset($_POST['week']))
+     $week = $_POST['week'];
+     $sql="SELECT * FROM `tece'os'` WHERE prn='113A1032' AND week=".$week;
       att($conn,$sql);
       ?>
     </tr>
     <tr>
       <td >SOOAD </td>
  <?php 
-     $sql="SELECT * FROM `tece'sooad'` WHERE prn='113A1032'";
+ if(isset($_POST['week']))
+ $week = $_POST['week'];
+     $sql="SELECT * FROM `tece'sooad'` WHERE prn='113A1032' AND week=".$week;
     att($conn,$sql);
       ?>
     </tr>
     <tr>
       <td >WTL </td>
  <?php 
-     $sql="SELECT * FROM `tece'wtl'` WHERE prn='113A1032'";
+ if(isset($_POST['week']))
+ $week = $_POST['week'];
+     $sql="SELECT * FROM `tece'wtl'` WHERE prn='113A1032' AND week=".$week;
    att($conn,$sql);
       ?>
     </tr>
     <tr>
       <td >BCE </td>
  <?php 
-     $sql="SELECT * FROM `tece'bce'` WHERE prn='113A1032'";
+ if(isset($_POST['week']))
+ $week = $_POST['week'];
+     $sql="SELECT * FROM `tece'bce'` WHERE prn='113A1032' AND week=".$week;
   att($conn,$sql);
       ?>
     </tr>

@@ -1,12 +1,20 @@
+
 <?php
-session_start();
-?>
+  session_start();
+    $server="localhost";
+    $user="root";
+    $pass="";
+    $db="signupusers";
+    $conn=mysqli_connect("$server","$user","$pass","$db");
+    ?>
 <!DOCTYPE html>
 <html>
 <head>
 	<title>Class-hub</title>
 	<meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="css/demo.css">
   <link href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
@@ -21,6 +29,50 @@ session_start();
 
 
   </script>
+  <style type="text/css">
+   
+    .w3-card-4{
+        float: left;
+        margin-left: 7px;
+    }
+
+    #menu{
+        overflow-y: hidden;
+        margin-top: 5px;
+    }
+    .w3-container{
+        background:black ;
+        color: white;
+    }
+    .timing{
+        margin-top: 0px;
+        float: right;
+        color: indianred;
+    }
+    .w3-button{
+        margin: 7px 0px;
+       width: 40%;
+       }
+    p{
+        margin: 0px;
+    }
+    
+    img {
+  max-width: 100%;
+  
+  
+}
+.w3-card-4:hover {
+  -moz-transform: scale(1.09);
+  -webkit-transform: scale(1.09);
+  transform: scale(1.09);
+  -moz-transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+    
+</style>
+
   <style type="text/css">
       iframe{
         border: none;
@@ -145,6 +197,15 @@ session_start();
   color: rgba(0,0,0,.4);
 }
 
+.w3-card-4{
+       margin-top:3em;
+        margin-left:1em;
+    }
+ .w3-button{
+        margin: 7px 0px;
+       width: 40%;
+       }
+
     </style>
 </head>
 <body>
@@ -161,61 +222,104 @@ session_start();
   <span style="font-size:30px;color:#FFFFFF;cursor:pointer; padding-left:10px;" onclick="openNav()"> &#9776; Menu </span>
   <div  style="float: right;" >
     <span class="custom-dropdown big">
-    <select onChange="window.location.href=this.value">    
+    <form method="POST" action="demo.php">
+    <select name="subject">    
         <option selected="true" disabled>SELECT SUBJECTS </option>
-        <option value="#mp">Microprocessor</option>  
-        <option value="#cn">Computer Networks</option>
-        <option value="#os">Operating Systems</option>
+        <option value="mp">Microprocessor</option>  
+        <option value="cn">Computer Networks</option>
+        <option value="os">Operating Systems</option>
         <option value="sooad">SOOAD</option>
     </select>
+    <input type="submit" value="submit">
+  </form>
 </span>
   </div>
-  
-  
-  <div class="Box">
+  <?php
+  if(isset($_POST['subject']))
+    $sub=$_POST['subject'];
+  else $sub='mp';
+  ?>
+  <div class="Box" style="margin-left: 6em;">
     <div class="row">
-          <div class="col-sm-9" >
-          <iframe id="main-video" width="560" height="400" src="https://www.youtube.com/embed/qpgTC9MDx1o" frameborder="0" allowfullscreen></iframe>
+  <div class="col-sm-9" >
+    <?php
+    $vid=mysqli_query($conn,"SELECT monday FROM videos WHERE subject='mp'");
+    $row=mysqli_fetch_assoc($vid);
+    if(isset($_POST['vdourl'])){
+      $src=$_POST['url'];
+    }else{
+      $src="https://www.youtube.com/embed/qpgTC9MDx1o
+";
+    }
+    ?>
+          <iframe id="main-video" width="560" height="400" src=<?php echo $src; ?> frameborder="0" allowfullscreen></iframe>
         </div>
-     <div class="col-sm-9 missed-lectures" >
-         <h3 id="blinker" style="margin-bottom: 1em;color:#FFFFFF;"><strong>VIDEOS YOU HAVE MISSED LECTURES!</strong></h3>
-     <iframe class="mySlides2" id="frame1"  src="sanky.php">
-              <p>Your browser does not support iframes.</p>
-            </iframe>
-</div>
-<div class="col-sm-9 missed-lectures" >
-         <h3 style="margin-bottom: 1em;" id="mp"><strong>Microprocessor</strong></h3>
-        <iframe class="mySlides2" id="frame2"  src="sanky.php">
-              <p>Your browser does not support iframes.</p>
-            </iframe>
-         
-        
-</div>
-<div class="col-sm-9 missed-lectures" >
-         <h3 style="margin-bottom: 1em;" id="cn"><strong>Computer Networks</strong></h3>
-        <iframe class="mySlides2" id="frame2"  src="sanky.php">
-              <p>Your browser does not support iframes.</p>
-            </iframe>
-         
-        
-</div>
-<div class="col-sm-9 missed-lectures" >
-         <h3 style="margin-bottom: 1em;" id="os"><strong>Operating Systems</strong></h3>
-        <iframe class="mySlides2" id="frame2"  src="sanky.php">
-              <p>Your browser does not support iframes.</p>
-            </iframe>
-         
-        
-</div>
-<div class="col-sm-9 missed-lectures" >
-         <h3 style="margin-bottom: 1em;" id="sooad"><strong>SOAAD</strong></h3>
-        <iframe class="mySlides2" id="frame2"  src="sanky.php">
-              <p>Your browser does not support iframes.</p>
-            </iframe>
-         
-        
-</div>
-</div>
+
+  <div class="col-sm-9" >
+<div id="menu ">
+  <div class="w3-card-4 " style="width:18%; ">
+    <?php
+    $vid=mysqli_query($conn,"SELECT monday FROM videos WHERE subject='$sub'");
+    $row=mysqli_fetch_assoc($vid);
+    ?>
+    
+    <iframe width="200" height="130" src=<?php echo $row['monday']; ?> frameborder="0" allowfullscreen id="iff"></iframe>
+    <center><form action="demo.php" method="POST">
+      <input type="hidden" name="url" value=<?php echo $row['monday']; ?>>
+    <input type="submit" name ="vdourl" value="View" id="bt" class="w3-button w3-green w3-center">
+    </form>
+   </center> 
+    </div>
+    <div class="w3-card-4 " style="width:18%; ">
+    <?php
+    $vid2=mysqli_query($conn,"SELECT tuesday FROM videos WHERE subject='$sub'");
+    $row2=mysqli_fetch_assoc($vid2);
+    ?>
+    <iframe width="200" height="130" src=<?php echo $row2['tuesday']; ?> frameborder="0" allowfullscreen  id="iff"></iframe>
+    <center><form action="demo.php" method="POST">
+      <input type="hidden" name="url" value=<?php echo $row2['tuesday']; ?>>
+    <input type="submit" name ="vdourl" value="View" id="bt" class="w3-button w3-green w3-center">
+    </form></center> 
+    </div>
+    <div class="w3-card-4 " style="width:18%; ">
+    <?php
+    $vid=mysqli_query($conn,"SELECT wednesday FROM videos WHERE subject='$sub'");
+    $row=mysqli_fetch_assoc($vid);
+    ?>
+    <iframe width="200" height="130" src=<?php echo $row['wednesday']; ?> frameborder="0" allowfullscreen  id="iff"></iframe>
+    <center><form action="demo.php" method="POST">
+      <input type="hidden" name="url" value=<?php echo $row['wednesday']; ?>>
+    <input type="submit" name ="vdourl" value="View" id="bt" class="w3-button w3-green w3-center">
+    </form></center> 
+    </div>
+    <div class="w3-card-4 " style="width:18%; ">
+    <?php
+    $vid=mysqli_query($conn,"SELECT thursday FROM videos WHERE subject='$sub'");
+    $row=mysqli_fetch_assoc($vid);
+    ?>
+    <iframe width="200" height="130" src=<?php echo $row['thursday']; ?> frameborder="0" allowfullscreen  id="iff"></iframe>
+    <center><form action="demo.php" method="POST">
+      <input type="hidden" name="url" value=<?php echo $row['thursday']; ?>>
+    <input type="submit" name ="vdourl" value="View" id="bt" class="w3-button w3-green w3-center">
+    </form></center> 
+    </div>
+   <div class="w3-card-4 " style="width:18%; ">
+    <?php
+    $vid=mysqli_query($conn,"SELECT friday FROM videos WHERE subject='$sub'");
+    $row=mysqli_fetch_assoc($vid);
+    ?>
+    <iframe width="200" height="130" src=<?php echo $row['friday']; ?> frameborder="0" allowfullscreen  id="iff"></iframe>
+    <center><form action="demo.php" method="POST">
+      <input type="hidden" name="url" value=<?php echo $row['friday']; ?>>
+    <input type="submit" name ="vdourl" value="View" id="bt" class="w3-button w3-green w3-center">
+    </form></center> 
+    </div>
+    
+    </div>
   </div>
+</div>
+
+</div>
+ </div>
 </body>
 </html>
