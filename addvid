@@ -1,0 +1,48 @@
+<html>
+<body>
+<table>
+<form method="POST" acction="vid.php">
+<tr>
+<th>Subject</th>
+<th>Monday</th>
+<th>Tuesday</th>
+<th>Wednesday</th>
+<th>Thursday</th>
+<th>Friday</th>
+</tr>
+<tr>
+<th>MP</th>
+<th><input type="text"></th>
+<th><input type="text"></th>
+<th><input type="text"></th>
+<th><input type="text"></th>
+<th><input type="text"></th>
+</tr>
+<tr>
+<th>OS</th>
+<th><input type="text"></th>
+<th><input type="text"></th>
+<th><input type="text"></th>
+<th><input type="text"></th>
+<th><input type="text"></th>
+</tr>
+<tr>
+<th>SOOAD</th>
+<th><input type="text"></th>
+<th><input type="text"></th>
+<th><input type="text"></th>
+<th><input type="text"></th>
+<th><input type="text"></th>
+</tr>
+<tr>
+<th>CN</th>
+<th><input type="text"></th>
+<th><input type="text"></th>
+<th><input type="text"></th>
+<th><input type="text"></th>
+<th><input type="text"></th>
+</tr>
+</form
+</table>
+</body>
+</html>
