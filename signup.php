@@ -9,7 +9,10 @@
     $c=$_POST["br"];
     $d=($_POST["pass"]);
     $e=md5($d);
+    $psql="SELECT * FROM Student WHERE name='$a'";
    
+     
+    $numresult=mysqli_num_rows($psql);
     if($conn)
     {  if(strlen($b)>8||strlen($b)<8){
        echo '<!DOCTYPE html>
@@ -23,6 +26,20 @@
                 <body>
                 </body>
                 </html>';}
+                else if($numresult>=1){
+                    echo '<!DOCTYPE html>
+                <html>
+                <head>
+                <script>
+                alert("Username Already Exist\nAccount Could not be Created");
+                    window.location = "login.php";
+                 </script>
+                  </head>
+                <body>
+                </body>
+                </html>';
+
+                }
                 else{
                     $sql="INSERT INTO Student(prn,name,branch,passw) VALUES('$b','$a','$c','$e')";
                     if(mysqli_query($conn, $sql)){

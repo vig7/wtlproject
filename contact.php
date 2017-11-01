@@ -8,7 +8,7 @@
 	<meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  
+  <link rel="stylesheet" type="text/css" href="css/contact.css">
   <link href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
@@ -26,150 +26,7 @@
         alert("Response sent\nYou will be directed to Mail client.");
     }
   </script>
-  <style >
-    p{
-  font-weight: 20px;
-  color:#000000; 
-}
-body{
-  background-image: url('img/cont.jpg');
-  background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: center;
-
-
-}
-.Box{
-  margin-top: 30em;
-}
-
-h1{
   
-  font-family: "Arial Black",Gadget,sans-serif;
-  font-style: italic;
-  font-size: 50px;
-  text-align: center;
-  color:#E28C3B;
-}
-
-.card {
-  
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    transition: 0.3s;
-    width: 225px;
-    border-radius: 5px;
-}
-
-.card:hover {
-    box-shadow: 0 20px 40px 0 rgba(0,0,0,0.4);
-}
-
-img {
-    border-radius: 8px 8px 0 0;
-    width: 100%;
-    height: 280px;
-}
-.row{
-  padding-left: 70px;
-}
-
-}
-h4{
-  font-family: sans-serif;
-  color:#000000;
-}
-
-.ccheader {
-  margin: 0 auto;
-  padding: 2em;
-  text-align: center;
-}
-
-.ccheader h1 {
-  margin: 0;
-  font-weight: 300;
-  font-size: 2.5em;
-  line-height: 1.3;
-}
-.ccheader {
-  margin: 0 auto;
-  padding: 2em;
-  text-align: center;
-}
-
-.ccheader h1 {
-  margin: 0;
-  font-weight: 300;
-  font-size: 2.5em;
-  line-height: 1.3;
-}
-
-/* Form CSS*/
-.ccform {
-   margin: 0 auto;
-    width: 800px;
-}
-.ccfield-prepend{
-  margin-bottom:10px;
-  width:100%;
-}
-
-.ccform-addon{
-  color:#f8ae45; 
-  float:left;
-  padding:8px;
-  width:8%;
-  background:#FFFFFF;
-  text-align:center;  
-}
-
-.ccformfield {
-  color:#000000; 
-  background:#FFFFFF;
-  border:none;
-  padding:15.5px;
-  width:91.9%;
-  display:block;
-  font-family: 'Lato',Arial,sans-serif;
-  font-size:14px;
-}
-
-.ccformfield {
-  font-family: 'Lato',Arial,sans-serif;
-}
-.ccbtn{
-  display:block;
-  border:none;
-  background:#f8ae45;
-  color:#FFFFFF;
-  padding:12px 25px;
-  cursor:pointer;
-  text-decoration:none;
-  font-weight:bold;
-}
-.ccbtn:hover{
-  background:#d8850e;
-
-}
-.credit {
-  width: 800px;
-  clear:both;
-margin:0 auto;
-  line-height:25px;
- padding: 25px 50px; 
-text-align: center;
-}
-.credit em{
-margin-right:5px;
-}
-.credit a {
-color: #000;
-font-weight: bold;
-text-decoration: none;
-}
-
-  </style>
-
 </head>
 <body>
 	<nav class="navbar navbar-inverse">
@@ -198,8 +55,8 @@ text-decoration: none;
       <div class="col-md-4">
 	
 		<div class="card" id="c1">
-		  <img src="img/sparsh.jpeg" alt="Avatar" >
-		  <div class="container">
+		  <img src="img/sparsh.jpg" alt="Avatar" >
+		  <div class="container" >
 			    <h4><b>SPARSH ARORA</b></h4> 
 			    <p>115A1032</p> 
   		  </div>
@@ -208,7 +65,7 @@ text-decoration: none;
   	<div class="col-md-4">
 	   <div class="card" id="c2">
 		  <img src="img/sanket.jpg" alt="Avatar" >
-		  <div class="container">
+		  <div class="container" >
 		    <h4><b>SANKET BAILMARE</b></h4> 
 		    <p>115A1035</p> 
 		  </div>
@@ -217,7 +74,7 @@ text-decoration: none;
 	<div class="col-md-4">
 	  <div class="card" id="c3">
 		  <img src="img/somesh.jpeg" alt="Avatar" >
-		  <div class="container">
+		  <div class="container" >
 		    <h4><b>SOMESH BANERJEE</b></h4> 
 		    <p>115A1037</p> 
 		  </div>

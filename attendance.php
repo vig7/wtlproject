@@ -5,6 +5,7 @@ session_start();
     $pass="";
     $db="signupusers";
     $conn=mysqli_connect("$server","$user","$pass","$db");
+   
 ?>
 <!DOCTYPE html>
 <html>
@@ -30,7 +31,7 @@ session_start();
   position: relative;
   display: inline-block;
   vertical-align: middle;
-  margin: 10px; /* demo only */
+  margin: 10px; 
 }
 
 .custom-dropdown select {
@@ -114,11 +115,6 @@ session_start();
   </div>
   <span style="font-size:30px;color:#FFFFFF;cursor:pointer" onclick="openNav()"> &#9776; Menu </span>
   <?php
-$server="localhost";
-    $user="root";
-    $pass="";
-    $db="signupusers";
-    $conn=mysqli_connect("$server","$user","$pass","$db");
     function att($conn,$sql)
     {$retval = mysqli_query( $conn, $sql );
       while($row =mysqli_fetch_assoc($retval)) {
@@ -170,7 +166,7 @@ $server="localhost";
       if(isset($_POST['week']))
        $week = $_POST['week'];
       
-     $sql="SELECT * FROM `tece'mp'` WHERE prn='113A1032' AND week=".$week;
+     $sql="SELECT * FROM `tece'mp'` WHERE prn='$prn' AND week=".$week;
       att($conn,$sql);
       ?>
     </tr>
@@ -179,7 +175,7 @@ $server="localhost";
  <?php 
  if(isset($_POST['week']))
       $week = $_POST['week'];
-     $sql="SELECT * FROM `tece'cn'` WHERE prn='113A1032' AND week=".$week;
+     $sql="SELECT * FROM `tece'cn'` WHERE prn='$prn' AND week=".$week;
       att($conn,$sql);
       ?>
     </tr>
@@ -188,7 +184,7 @@ $server="localhost";
      <?php 
      if(isset($_POST['week']))
      $week = $_POST['week'];
-     $sql="SELECT * FROM `tece'os'` WHERE prn='113A1032' AND week=".$week;
+     $sql="SELECT * FROM `tece'os'` WHERE prn='$prn' AND week=".$week;
       att($conn,$sql);
       ?>
     </tr>
@@ -197,7 +193,7 @@ $server="localhost";
  <?php 
  if(isset($_POST['week']))
  $week = $_POST['week'];
-     $sql="SELECT * FROM `tece'sooad'` WHERE prn='113A1032' AND week=".$week;
+     $sql="SELECT * FROM `tece'sooad'` WHERE prn='$prn' AND week=".$week;
     att($conn,$sql);
       ?>
     </tr>
@@ -206,7 +202,7 @@ $server="localhost";
  <?php 
  if(isset($_POST['week']))
  $week = $_POST['week'];
-     $sql="SELECT * FROM `tece'wtl'` WHERE prn='113A1032' AND week=".$week;
+     $sql="SELECT * FROM `tece'wtl'` WHERE prn='$prn' AND week=".$week;
    att($conn,$sql);
       ?>
     </tr>
@@ -215,7 +211,7 @@ $server="localhost";
  <?php 
  if(isset($_POST['week']))
  $week = $_POST['week'];
-     $sql="SELECT * FROM `tece'bce'` WHERE prn='113A1032' AND week=".$week;
+     $sql="SELECT * FROM `tece'bce'` WHERE prn='$prn' AND week=".$week;
   att($conn,$sql);
       ?>
     </tr>

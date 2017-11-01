@@ -45,7 +45,13 @@
     <div class="content" style=" opacity:0.8">
       <h2 style="text-align: center;"><strong><strong><i>CLASS-HUB SYSTE</i>M</strong></strong></h2>
       <h4 style="font-family: Georgia, serif ;font-size :20px;">Class hub is a sysytem where a student of siesgst can login in the system to have the access to the activities going in the college.Focusing on academics the claas hub system integrates videos of the lectures taught in the class which is updated every day. Students absent on the particular day of the week can have access to the videos  taught in class !</h4>
-      <a class="btn btn-primary btn-lg" href="login.php" role="button" style="margin-left: 7em;margin-top: 8px;"><strong>Login &raquo;</strong></a>
+       <?php
+                  if(!isset($_SESSION['user']))
+                    echo '<a class="btn btn-primary btn-lg" href="login.php" role="button" style="margin-left: 7em;margin-top: 8px;"><strong>Login &raquo;</strong></a>';
+                  else
+                     echo '<a class="btn btn-primary btn-lg" href="Logout.php" role="button" style="margin-left: 7em;margin-top: 8px;"><strong>Logout &raquo;</strong></a>';
+
+       ?>
     </div>
   </div>
   <div class="container right">

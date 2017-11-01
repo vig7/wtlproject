@@ -6,6 +6,7 @@
     $pass="";
     $db="signupusers";
     $conn=mysqli_connect("$server","$user","$pass","$db");
+    
     ?>
 <!DOCTYPE html>
 <html>
@@ -17,6 +18,7 @@
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="css/demo.css">
+
   <link href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
   <script  src="js/postlogin.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -243,13 +245,13 @@
   <?php
   if(isset($_POST['subject']))
     $sub=$_POST['subject'];
-  else $sub='mp';
+  else $sub='missed';
   ?>
   <div class="Box" style="margin-left: 6em;">
     <div class="row">
   <div class="col-sm-9" >
     <?php
-    $vid=mysqli_query($conn,"SELECT monday FROM videos WHERE subject='missed'");
+    $vid=mysqli_query($conn,"SELECT monday FROM videos WHERE subject='$sub'");
     $row=mysqli_fetch_assoc($vid);
     if(isset($_POST['vdourl'])){
       $src=$_POST['url'];
@@ -269,19 +271,19 @@
     ?>
     
     <iframe width="200" height="130" src=<?php echo $row['monday']; ?> frameborder="0" allowfullscreen id="iff"></iframe>
-    <center><form action="demo.php" method="POST">
+    <center><form method="POST">
       <input type="hidden" name="url" value=<?php echo $row['monday']; ?>>
     <input type="submit" name ="vdourl" value="View" id="bt" class="w3-button w3-green w3-center">
     </form>
    </center> 
     </div>
-    <div class="w3-card-4 " style="width:18%; ">
+    <div class="w3-card-4" style="width:18%; ">
     <?php
     $vid2=mysqli_query($conn,"SELECT tuesday FROM videos WHERE subject='$sub'");
     $row2=mysqli_fetch_assoc($vid2);
     ?>
     <iframe width="200" height="130" src=<?php echo $row2['tuesday']; ?> frameborder="0" allowfullscreen  id="iff"></iframe>
-    <center><form action="demo.php" method="POST">
+    <center><form method="POST">
       <input type="hidden" name="url" value=<?php echo $row2['tuesday']; ?>>
     <input type="submit" name ="vdourl" value="View" id="bt" class="w3-button w3-green w3-center">
     </form></center> 
@@ -292,7 +294,7 @@
     $row=mysqli_fetch_assoc($vid);
     ?>
     <iframe width="200" height="130" src=<?php echo $row['wednesday']; ?> frameborder="0" allowfullscreen  id="iff"></iframe>
-    <center><form action="demo.php" method="POST">
+    <center><form method="POST">
       <input type="hidden" name="url" value=<?php echo $row['wednesday']; ?>>
     <input type="submit" name ="vdourl" value="View" id="bt" class="w3-button w3-green w3-center">
     </form></center> 
@@ -303,7 +305,7 @@
     $row=mysqli_fetch_assoc($vid);
     ?>
     <iframe width="200" height="130" src=<?php echo $row['thursday']; ?> frameborder="0" allowfullscreen  id="iff"></iframe>
-    <center><form action="demo.php" method="POST">
+    <center><form method="POST">
       <input type="hidden" name="url" value=<?php echo $row['thursday']; ?>>
     <input type="submit" name ="vdourl" value="View" id="bt" class="w3-button w3-green w3-center">
     </form></center> 
@@ -314,7 +316,7 @@
     $row=mysqli_fetch_assoc($vid);
     ?>
     <iframe width="200" height="130" src=<?php echo $row['friday']; ?> frameborder="0" allowfullscreen  id="iff"></iframe>
-    <center><form action="demo.php" method="POST">
+    <center><form method="POST">
       <input type="hidden" name="url" value=<?php echo $row['friday']; ?>>
     <input type="submit" name ="vdourl" value="View" id="bt" class="w3-button w3-green w3-center">
     </form></center> 
