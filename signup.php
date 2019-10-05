@@ -19,7 +19,7 @@
                 <html>
                 <head>
                 <script>
-                alert("Invalid Prn\nAccount Could not be Created");
+                alert("This PRN is Invalid\nAccount Could not be Created");
                     window.location = "login.php";
                  </script>
                   </head>
@@ -67,7 +67,7 @@
                 <html>
                 <head">
                 <script>
-                alert("Account Could not be Created");
+                alert("We are sorry! Account Could not be Created");
                 window.location = "login.php";
                 </script>
                 </head>
